@@ -8,7 +8,7 @@ req = requests.get(url)
 soup = BeautifulSoup(req.content, 'html.parser')
 
 lista_materias = soup.find_all(class_='row bcdaily-stories')
-for lista_titulos in lista_materias[:10]:
+for lista_titulos in lista_materias:
     lista = lista_titulos.find_all('h3', class_='bcdaily-title')
     titulos = []
     for lista_dados in lista[:10]:
